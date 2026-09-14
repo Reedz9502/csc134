@@ -5,6 +5,8 @@
 // Build a receipt that looks like a receipt
 
 #include <iostream>
+// iomanip lets you use setw() and setprecision() and fixed
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -32,10 +34,12 @@ int main() {
     // TODO: Print like a receipt
     string line = "-----------------------------------------";
     cout << line << endl;
-    cout << meal_name << " " << meal_price << endl;
-    cout << " tax: " << " " << tax_amount << endl;
+    // Set width of columns
+    cout << setprecision(2) << fixed;
+    cout << setw(20) << meal_name << setw(15) << meal_price << endl;
+    cout << setw(20) << " tax: " << setw(15) << tax_amount << endl;
     cout << line << endl;
-    cout << "Total: " << total << endl;
+    cout << setw(20) << "Total: " << setw(15) << total << endl;
     cout << "Thank You Come Again" <<  endl << endl;
 
     return 0; // no errors
