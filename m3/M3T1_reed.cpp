@@ -12,22 +12,37 @@ using namespace std;
 int main() {
 
     // Variables
-    double len1, wid1, len2, wid2; 
-    double area1, area2;
+    double length1, width1, area1;
+    double length2, width2, area2;
 
     // Ask user for the length and width
-    cout << "What's the length of the first rectangle? ";
-    cin >> len1;
-    cout << "What's the width of the first rectangle? ";
-    cin >> wid1;
-    cout << "What's the length of the second rectangle? ";
-    cin >> len2;
-    cout << "What's the width of the second rectangle? ";
-    cin >> wid2;
+    cout << "First rectangle:" << endl;
+    cout << "\tlength ? ";
+    cin >> length1;
+    cout << "\twidth ? ";
+    cin >> width1;
+
+    cout << "Second rectangle:" << endl;
+    cout << "\tlength ? ";
+    cin >> length2;
+    cout << "\twidth ? ";
+    cin >> width2;
 
     // Find the area
-
+    area1 = length1 * width1;
+    area2 = length2 * width2;
     // Print the area
+    cout << "Rectangle 1 is area: " << area1 << endl;
+    cout << "Rectangle 2 is area: " << area2 << endl;
 
+    if (area1 > area2) {
+        cout << "Rectangle 1 is larger." << endl;
+    }
+    else if (area2 > area1) {
+        cout << "Rectangle 2 is larger." << endl;
+    }
+    else {
+        cout << "They are the same size." << endl;
+    }
     return 0;
 }
